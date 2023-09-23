@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="title">Markdown Previewer</h1>
+    <div class="container" x-data="{markdown: defaultText}">
+      <div class="box">
+        <h2>Edit</h2>
+        <textarea x-model="markdown"></textarea>
+      </div>
+
+      <div class="box">
+        <h2>Previewer</h2>
+        <div class="preview" x-html="marked.parse(markdown)"></div>
+      </div>
+    </div>
+  </body>
+</html>
